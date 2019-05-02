@@ -1,2 +1,12 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<div class="row">
+  <div class="col-md-12">
+    <h1><%= @post.title %></h1>
+    <p>カテゴリ・ω・: <%= @post.category %></p>
+    <p>投稿日・ω・:<%= @post.created_at %></p>
+    <hr>
+    <%= simple_format(@post.body) %>
+    <hr>
+    <%= link_to "編集🐶", edit_post_path(@post), class: "btn btn-secondary" %>
+    <%= link_to "削除(´・ω・｀)", post_path(@post), class: "btn btn-danger", method: :delete %>
+  </div>
+</div>

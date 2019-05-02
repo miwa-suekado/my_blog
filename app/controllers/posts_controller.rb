@@ -1,9 +1,11 @@
 class PostsController < ApplicationController
+
   def index
+
   end
 
   def show
-    
+    @post = Post.find(params[:id])
   end
 
   def new
@@ -11,19 +13,22 @@ class PostsController < ApplicationController
   end
 
   def create
-    byebug
+  
     @post = Post.new(post_params)
     @post.save
     redirect_to @post
   end
 
   def edit
+
   end
 
   def update
+
   end
 
   def destroy
+
   end
 
   private
