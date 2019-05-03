@@ -1,4 +1,17 @@
 <div class="row">
+  <div class="col-md-12">
+    <div class="form-inline float-right mb-3">
+      <%= search_form_for @q do |f| %>
+        <div class="form-group">
+          <%= f.search_field :title_or_body_cont, placeholder: "タイトルか本文を検索します", class: "form-control" %>
+          <%= f.submit "検索です", class: "btn btn-primary" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
   <div class="col-md-8">
   🐻
     <% @posts.each do |post| %>
