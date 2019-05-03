@@ -1,7 +1,9 @@
 class PostsController < ApplicationController
 
   def index
-  
+    @posts = Post.all
+    @new_posts = Post.all
+    @author = Author.first
   end
 
   def show
@@ -29,7 +31,9 @@ class PostsController < ApplicationController
   end
 
   def destroy
-
+    @post = Post.find(params[:id])
+    @post.destroy
+    redirect_to  posts_path
   end
 
   private
