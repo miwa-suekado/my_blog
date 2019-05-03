@@ -1,2 +1,20 @@
-<h1>Posts#edit</h1>
-<p>Find me in app/views/posts/edit.html.erb</p>
+<div class="row">
+  <div class="col-md-12">
+    <h1>(о´∀`о)💖【ブログ記事編集】(о´∀`о)💖</h1>
+    <%= form_with model: @post, local: true do |form| %>
+      <div class="form-group">
+        <%= form.label "🐶【タイトル】🐶" %>
+        <%= form.text_field :title, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= form.label "😻【カテゴリ】😻" %>
+        <%= form.text_field :category, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= form.label "🐥【本文】🐥" %>
+        <%= form.text_area :body, class: "form-control" %>
+      </div>
+      <%= form.submit '編集する(о´∀`о)', class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
